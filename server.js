@@ -14,10 +14,12 @@ const ObjectId = require('mongodb').ObjectID;
 const uri = "mongodb+srv://sammyrussom:Adonay56@cluster0.zcb8g9h.mongodb.net/";
 
 let db; // Declare a variable to store the database connection
-client.connect(uri,(err,cli)=>{
-    db = cli.db('CW3');
-});
 
+// Connect to the database
+client.connect(uri,(err,cli)=>{
+    db = cli.db('CW3'); // Assign the database connection to the 'db' variable
+});
+// Connect to the database
 app.use(cors())
 app.use(express.json());
 
