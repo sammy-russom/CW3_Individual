@@ -28,7 +28,7 @@ app.use((req,res,next)=>{
     let formatted_date = `${dt.getFullYear()}-${dt.getMonth() + 1}-${dt.getDate()} ${dt.getHours()}:${dt.getMinutes()}:${dt.getSeconds()}`
     let formatted_log = `[${formatted_date}] ${req.method}:${req.url} ${res.statusCode}`;
     console.log(formatted_log); // Log the formatted request information
-    next()
+    next() // Move to the next middleware or route handler
 });
 
 app.param('collectionName',(req,res,next,collectionName)=>{
