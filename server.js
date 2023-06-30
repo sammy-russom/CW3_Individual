@@ -23,6 +23,7 @@ client.connect(uri,(err,cli)=>{
 app.use(cors())
 app.use(express.json());
 
+// Custom middleware to log request information
 app.use((req,res,next)=>{
     let dt = new Date();
     let formatted_date = `${dt.getFullYear()}-${dt.getMonth() + 1}-${dt.getDate()} ${dt.getHours()}:${dt.getMinutes()}:${dt.getSeconds()}`
